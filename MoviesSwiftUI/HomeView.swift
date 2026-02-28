@@ -22,19 +22,14 @@ struct HomeView: View {
                     //  TODO: - Здесь функционал кнопки
                 } label: {
                     Text(Constants.playString)
-                        .frame(width: 100, height: 50)
-                        .foregroundStyle(.buttonText)
-                        .bold()
-                        .background {
-                            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                .stroke(.buttonBorder, lineWidth: 5)
-                        }
+                        .ghostButton()
                 }
                 //  Добавляем вторую кнопку
                 Button {
                     
                 } label: {
                     Text(Constants.downloadString)
+                        .ghostButton()
                 }
 
             }
