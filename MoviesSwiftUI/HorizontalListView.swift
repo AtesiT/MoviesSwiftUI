@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct HorizontalListView: View {
-    let header = Constants.trendingMovieString
+    let header : String
     //  Используем var для titles, потому что список может изменится
     var titles = [Constants.testTitleURL, Constants.testTitleURL2, Constants.testTitleURL3]
     
@@ -18,6 +18,7 @@ struct HorizontalListView: View {
                             image
                                 .resizable()
                                 .scaledToFit()
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
                         } placeholder: {
                             ProgressView()
                         }
@@ -26,10 +27,12 @@ struct HorizontalListView: View {
                     }
                 }
             }
+            .frame(height: 250)
+            .padding(10)
         }
     }
 }
 
 #Preview {
-    HorizontalListView()
+    HorizontalListView(header: Constants.trendingMovieString)
 }
