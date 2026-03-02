@@ -1,5 +1,9 @@
 import Foundation
 
+struct APIObject: Decodable {
+    var results: [Title] = []
+}
+
 struct Title: Decodable, Identifiable {
     var id: Int?
     var title: String?
