@@ -15,7 +15,10 @@ struct ContentView: View {
             Tab(Constants.downloadString, systemImage: Constants.downloadIconString) {
                 Text(Constants.downloadString)
             }
-
+        }
+        .onAppear {
+            print(APIConfig.shared.tmdbBaseURL)
+            print(APIConfig.shared.tmdbAPIKey)
         }
     }
 }
